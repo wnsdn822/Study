@@ -28,9 +28,8 @@
         function q2() {
             let email = $('#input-q2').val();
             if(email.includes('@')) {
-                devide = email.split('@')[1] // asd , gmail.com
-                devide2= devide.split('.')[0] // gmail , com
-                alert(devide2) // gmail
+                devide = email.split('@')[1].split('.')[0]
+                alert(devide) // gmail
             }else{
                 alert('이메일이 아닙니다')
             }
@@ -39,7 +38,7 @@
         function q3() {
             let txt = $('#input-q3').val();
             let temp_html = `<li>${txt}</li>`;
-            $('names-q3').append(temp_html);
+            $('#names-q3').append(temp_html);
 
             // 1. input-q3 값을 가져온다. let txt = ... q1, q2에서 했던 걸 참고!
             // 2. 가져온 값을 이용해 names-q3에 붙일 태그를 만든다. (let temp_html = `<li>${txt}</li>`) 요렇게!
@@ -47,7 +46,7 @@
         }
 
         function q3_remove() {
-            $('names-q3').empty();
+            $('#names-q3').empty();
             // 1. names-q3의 내부 태그를 모두 비운다.(jQuery의 $('....').empty()를 이용하면 굿!)
         }
 
