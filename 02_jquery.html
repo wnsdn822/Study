@@ -27,8 +27,8 @@
 
         function q2() {
             let email = $('#input-q2').val();
-            if(email.includes('@')) {
-                devide = email.split('@')[1].split('.')[0]
+            if(email.includes('@')) { //include 함수는 @를 포함하는지 확인
+                devide = email.split('@')[1].split('.')[0] // split함수는 '@' 기준으로 앞 뒤 나눔
                 alert(devide) // gmail
             }else{
                 alert('이메일이 아닙니다')
